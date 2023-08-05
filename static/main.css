@@ -1,0 +1,240 @@
+@font-face {
+    font-family: mvfont;
+    src: url(font.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:  #333;
+    color: whitesmoke;
+    font-family: mvfont;
+}
+
+/* list */
+ul {
+    margin-top: 50px;
+    background-color: rgb(32, 118, 152);
+    margin-left: 250px;
+    margin-right: 40px;
+    border-radius: 15px;
+    padding: 5px;
+}
+li {
+    overflow: hidden;
+    list-style: none;
+    color: whitesmoke;
+    padding: 6px;
+}
+li span {
+    margin-left: 20px;
+    display: inline-block;
+    margin-top: 3px;
+    vertical-align: top;
+    width: calc(100% - 180px);
+}
+li span.true {
+    text-decoration: line-through;
+}
+.checkbox {
+    border: solid 2px whitesmoke;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.checkbox.true {
+    background-color: whitesmoke;
+}
+li svg {
+    margin-top: -5px;
+    float: right;
+    transition: 0.2s;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 15px;
+}
+li svg:hover {
+    background-color: rgba(25, 25, 25, 0.5);
+}
+.date {
+    float: right;
+    width: auto;
+    margin-right: 10px;
+}
+.focused {
+    display: none;   
+}
+.focused p {
+    cursor: pointer;
+}
+
+hr {
+    border: 1px solid #222;
+}
+
+input[type=text] {
+    border: none;
+    background-color: rgb(32, 118, 152);
+    color: #222;
+    padding: 10px;
+    width: 200px;
+    border-radius: 12px;
+    outline: none;
+}
+
+button {
+    background-color: rgb(32, 118, 152);
+    border: none;
+    font-size: 18px;
+    color: #222;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+}
+
+button:hover {
+    transform: scale(1.07);
+}
+
+.action {
+    float: left;
+    margin-left: 5px;
+    padding: 5px !important;
+}
+
+.sidebar svg {
+    cursor: pointer;
+    padding: 5px 7px 6px 7px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+.sidebar svg:hover {
+    background-color: rgba(25, 25, 25, 0.5);
+}
+
+#keyboard {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+#version {
+    position: absolute;
+    bottom: 22px;
+    right: 15px;
+}
+
+#clock {
+    background-color: rgb(32, 118, 152);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px;
+    border-bottom-left-radius: 15px;
+    text-align: center;
+}
+
+.sidebar {
+    text-align: center;
+    position: absolute;
+    background-color: rgb(32, 118, 152);
+    height: 100%;
+    width: 200px;
+    left: 0;
+    top: 0;
+}
+.sidebar p {
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: max-content;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+.sidebar p:hover {
+    background-color: rgba(25, 25, 25, 0.5);
+}
+.selected {
+    text-decoration: underline;
+}
+
+/* new item button */
+#new {
+    position: absolute;
+    background-color: rgb(32, 118, 152);
+    bottom: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 15px;
+}
+#new svg {
+    padding: 3px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+#new svg:hover {
+    background-color: rgba(25, 25, 25, 0.5);
+}
+
+/* new item popup */
+#popup {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: #ffffff2d;
+}
+#popup select {
+    border: none;
+    background: rgb(32, 118, 152);
+    color: #222;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    -webkit-appearance: none;
+    width: 160px;
+}
+#popup div {
+    border-radius: 15px;
+    background-color: #444;
+    height: auto;
+    width: 280px;
+    margin-top: 80px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    padding: 30px;
+    text-align: center;
+}
+#popup div input {
+    margin: 4px 2px 4px 2px;
+}
+#popup div input::placeholder {
+    color: #222;
+}
+#popup div button {
+    position: relative;
+    top: calc(100% - 100px);
+}
+#date-input {
+    display: none;
+}
+#date-input input {
+    margin: 0;
+    display: inline-block;
+    border: none;
+    background-color: rgb(32, 118, 152);
+    color: #222;
+    padding: 10px;
+    width: 80px;
+    border-radius: 12px;
+    outline: none;
+}
